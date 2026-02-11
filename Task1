@@ -1,0 +1,74 @@
+ubuntu@ip-172-31-23-249:~$ pwd
+/home/ubuntu
+ubuntu@ip-172-31-23-249:~$ ls
+ubuntu@ip-172-31-23-249:~$ sudo mkdir task1
+ubuntu@ip-172-31-23-249:~$ cd task1/
+ubuntu@ip-172-31-23-249:~/task1$ touch file.txt
+touch: cannot touch 'file.txt': Permission denied
+ubuntu@ip-172-31-23-249:~/task1$ sudo touch file.txt
+ubuntu@ip-172-31-23-249:~/task1$ ls file.txt
+file.txt
+ubuntu@ip-172-31-23-249:~/task1$ cd ..
+ubuntu@ip-172-31-23-249:~$ sudo rm -rf task1/ file.txt
+ubuntu@ip-172-31-23-249:~$ ls
+ubuntu@ip-172-31-23-249:~$ sudo vi tasks
+ubuntu@ip-172-31-23-249:~$ sudo cat tasks
+I am inside vi editor
+ubuntu@ip-172-31-23-249:~$ sudo ls -l
+total 4
+-rw-r--r-- 1 root root 22 Feb 11 07:06 tasks
+ubuntu@ip-172-31-23-249:~$ sudo top
+
+top - 07:11:21 up 12 min,  1 user,  load average: 0.00, 0.00, 0.00
+Tasks: 109 total,   2 running, 107 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.3 sy,  0.0 ni, 86.2 id,  0.0 wa,  0.0 hi,  0.0 si, 13.5 st 
+MiB Mem :    957.3 total,    382.4 free,    330.5 used,    401.5 buff/cache     
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.    626.8 avail Mem
+
+ubuntu@ip-172-31-23-249:~$ sudo -htop
+
+ubuntu@ip-172-31-23-249:~$ sudo df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       6.8G  1.8G  5.0G  27% /
+tmpfs           479M     0  479M   0% /dev/shm
+tmpfs           192M  872K  191M   1% /run
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/xvda16     881M   89M  730M  11% /boot
+/dev/xvda15     105M  6.2M   99M   6% /boot/efi
+tmpfs            96M   12K   96M   1% /run/user/1000
+ubuntu@ip-172-31-23-249:~$ sudo free -m
+               total        used        free      shared  buff/cache   available
+Mem:             957         330         381           0         402         626
+Swap:              0           0           0
+ubuntu@ip-172-31-23-249:~$ sudo su -
+root@ip-172-31-23-249:~# exit
+logout
+ubuntu@ip-172-31-23-249:~$ history
+    1  linux
+    2  clear
+    3  ubuntu --version
+    4  --version
+    5  clear
+    6  pwd
+    7  ls
+    8  sudo mkdir task1
+    9  cd task1/
+   10  touch file.txt
+   11  sudo touch file.txt
+   12  ls file.txt
+   13  cd ..
+   14  sudo rm -rf task1/ file.txt
+   15  ls
+   16  sudo vi tasks
+   17  sudo cat tasks
+   18  sudo ls -l
+   19  sudo chmod 755
+   20  chmod --help
+   21  sudo top
+   22  sudo -htop
+   23  sudo htop
+   24  sudo df-h
+   25  sudo df -h
+   26  sudo free -m
+   27  sudo su -
+   28  history
