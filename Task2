@@ -91,3 +91,20 @@ origin	https://github.com/Zaid2724/Internship_EL.git (fetch)
 origin	https://github.com/Zaid2724/Internship_EL.git (push)
 ubuntu@ip-172-31-23-249:~/task2$ git branch -M main
 ubuntu@ip-172-31-23-249:~/task2$ git push -u origin main
+
+ubuntu@ip-172-31-23-249:~/task2$ git checkout -b feature
+Switched to a new branch 'feature'
+ubuntu@ip-172-31-23-249:~/task2$ git add .
+ubuntu@ip-172-31-23-249:~/task2$ git commit -m "Feature added"
+On branch feature
+nothing to commit, working tree clean
+ubuntu@ip-172-31-23-249:~/task2$ git checkout main
+Switched to branch 'main'
+ubuntu@ip-172-31-23-249:~/task2$ git merge feature
+Already up to date.
+ubuntu@ip-172-31-23-249:~/task2$ git log
+commit af64e7be764233c22e8f0966572902fa908dc552 (HEAD -> main, feature)
+Author: Ubuntu <ubuntu@ip-172-31-23-249.ec2.internal>
+Date:   Wed Feb 11 07:38:22 2026 +0000
+
+    first commit
