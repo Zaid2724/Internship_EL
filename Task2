@@ -1,0 +1,93 @@
+ubuntu@ip-172-31-23-249:~$ git --version
+git version 2.43.0
+
+ubuntu@ip-172-31-23-249:~$ sudo git config --global user.name "zaid"
+ubuntu@ip-172-31-23-249:~$ sudo git config --global user.email "zaid123@gmail.com"
+ubuntu@ip-172-31-23-249:~$ sudo git config --list
+user.name=zaid
+user.email=zaid123@gmail.com
+
+ubuntu@ip-172-31-23-249:~$ mkdir task2
+ubuntu@ip-172-31-23-249:~$ cd task2
+ubuntu@ip-172-31-23-249:~/task2$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/ubuntu/task2/.git/
+ubuntu@ip-172-31-23-249:~/task2$ echo "Hello Git" > file.txt
+ubuntu@ip-172-31-23-249:~/task2$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	file.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+ubuntu@ip-172-31-23-249:~/task2$ cd 
+ubuntu@ip-172-31-23-249:~$ git status
+fatal: not a git repository (or any of the parent directories): .git
+ubuntu@ip-172-31-23-249:~$ cd task2/
+ubuntu@ip-172-31-23-249:~/task2$ ls
+file.txt
+ubuntu@ip-172-31-23-249:~/task2$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	file.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+ubuntu@ip-172-31-23-249:~/task2$ git add file.txt
+ubuntu@ip-172-31-23-249:~/task2$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   file.txt
+
+ubuntu@ip-172-31-23-249:~/task2$ git commit -m "first commit"
+[master (root-commit) af64e7b] first commit
+ Committer: Ubuntu <ubuntu@ip-172-31-23-249.ec2.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+ubuntu@ip-172-31-23-249:~/task2$ git log
+commit af64e7be764233c22e8f0966572902fa908dc552 (HEAD -> master)
+Author: Ubuntu <ubuntu@ip-172-31-23-249.ec2.internal>
+Date:   Wed Feb 11 07:38:22 2026 +0000
+
+    first commit
+ubuntu@ip-172-31-23-249:~/task2$ cd
+ubuntu@ip-172-31-23-249:~$ git remote add origin https://github.com/Zaid2724/Internship_EL.git
+fatal: not a git repository (or any of the parent directories): .git
+ubuntu@ip-172-31-23-249:~$ cd task2/
+ubuntu@ip-172-31-23-249:~/task2$ git remote add origin https://github.com/Zaid2724/Internship_EL.git
+ubuntu@ip-172-31-23-249:~/task2$ git remote -v
+origin	https://github.com/Zaid2724/Internship_EL.git (fetch)
+origin	https://github.com/Zaid2724/Internship_EL.git (push)
+ubuntu@ip-172-31-23-249:~/task2$ git branch -M main
+ubuntu@ip-172-31-23-249:~/task2$ git push -u origin main
